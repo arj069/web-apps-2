@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
     @contact["phone_number"] = params["contact"]["phone_number"]
 
     # assign relationship between Contact and Company
-    @contact["company_id"] = params["contact"]["company_id"]
+    @contact["company_id"] = @company["id"]
 
     # save Contact row
     @contact.save
